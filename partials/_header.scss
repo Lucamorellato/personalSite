@@ -1,0 +1,157 @@
+//HEADER STYLES
+header {
+   background: $yellow;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+// GLOBAL CUBE STYLES
+.cube__gallery {
+   margin-top: 40vh;
+   align-self: flex-start;
+   position: relative;
+}
+
+.cube {
+   position: absolute;
+   left: 75px;
+}
+.cube2, .cube1 {
+   transition: transform 1.5s linear;
+   transform: translate(101px, 57px);
+   &:hover {
+      transform: translate(27px, 100px);
+   }
+
+}
+
+// INDIVIDUAL CUBE STYLES
+.cube1 {
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 90px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 90px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}
+
+.cube2 {
+   bottom: 64px;
+   margin-left: -111px;
+
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 90px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 90px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+      p {
+         text-align: center;
+         font-size: 2rem;
+      }
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}
+
+.cube3 {
+   margin-left: -223px;
+   bottom: 189px;
+   transform: translate(101px, 57px);
+
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 150px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 150px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}

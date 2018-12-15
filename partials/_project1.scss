@@ -1,0 +1,56 @@
+.section1{
+   background: $orange;
+   border-radius: 10px 10px 0 0;
+}
+
+.section1Content {
+   background: $white;
+   display: flex;
+   align-items: center;
+   // justify-content: space-evenly;
+   height: 100vh;
+}
+
+.section1Text {
+   width: 40%;
+   padding: 10px 10px 10px 40px;
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   
+  
+   
+   h2 {
+      font-size: 5rem;
+      text-transform: lowercase;
+      margin-bottom: 20px;
+   }
+   h3 {
+      font-size: 2rem;
+      margin: 0;
+      font-style: italic;
+   }
+   p {
+      font-size: 1.8rem;
+   }
+
+   .buttonContainer {
+      padding-top: 20px;
+      display: flex;
+      justify-content: flex-start;
+
+      a {
+         padding: 15px 30px;
+         background: $red;
+         color: $white;
+         margin-right: 30px;
+         
+      }
+   }
+}
+.section1Image {
+   width: 60%;
+   img {
+      padding: 10px;
+   }
+}

@@ -1,0 +1,78 @@
+//ANIMATION
+@keyframes animateIn {
+   0% {
+      opacity: 0; 
+   }
+   100% {
+      opacity: 1; 
+   } 
+}
+
+
+// NAV BAR STYLES
+header .navDots {
+   position: fixed;
+   bottom: 0;
+   top: 0;
+   right: 1.5%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-flow: column nowrap;
+   flex-flow: column nowrap;
+   -ms-flex-item-align: end;
+   justify-content: center;
+   align-self: center;
+   padding: 5px;
+   z-index: 10000; 
+}
+header .navDots .dot {
+   position: relative;
+   width: 50px;
+   // width: 18px;
+   height: 18px;
+   // border-radius: 50%;
+   margin-top: 30px;
+   border: 2px solid $black;
+   -webkit-transition: all 0.15s ease-in;
+   transition: all 0.15s ease-in-out; 
+}
+header .navDots .dotSelected {
+   background: black;
+   -webkit-transform: scale(1.3);
+   transform: scale(1.3); 
+}
+
+
+.dotText {
+   right: -70px;
+   position: absolute;
+   color: $black;
+   top: -10px;
+   text-transform: uppercase;
+   transition: all .2s;
+   opacity: 0;
+   letter-spacing: 1px;
+   p {
+      font-size: 3rem;
+      margin: 0;
+      padding-right: 70px;
+   }
+}
+
+.dot:hover .dotText  {
+   right: 30px;
+   opacity: 1;
+   // transition: all .5s;
+}
+@media (max-width: 500px) {
+   header .navDots {
+      display: none; 
+   } 
+}
+//MAY NOT NEED
+main {
+   height: 1000vh;
+}
