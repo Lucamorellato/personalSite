@@ -1,41 +1,41 @@
 
 const app = {}
 
-app.animations = function () {
-   let offset = 20;
-   $('.aboutDot').on('click', function () {
-      $('html, body').animate({
-         scrollTop: $("#about").offset().top + offset
-      }, 300);
-   })
-   $('.skillsDot').on('mouseover', function () {
-      $('html, body').animate({
-         scrollTop: $("#skills").offset().top + offset
-      }, 300);
-   })
+// app.animations = function () {
+//    let offset = 20;
+//    $('.aboutDot').on('click', function () {
+//       $('html, body').animate({
+//          scrollTop: $("#about").offset().top + offset
+//       }, 300);
+//    })
+//    $('.skillsDot').on('mouseover', function () {
+//       $('html, body').animate({
+//          scrollTop: $("#skills").offset().top + offset
+//       }, 300);
+//    })
 
-   $('.heroDot').on('mouseover', function () {
-      // $('.dotText').addClass('dotTextShow');
-   })
+//    $('.heroDot').on('mouseover', function () {
+//       // $('.dotText').addClass('dotTextShow');
+//    })
 
-   $('.projectsDot').on('mouseover', function () {
-      $('html, body').animate({
-         scrollTop: $("#projects").offset().top + offset
-      }, 300);
-   })
-   $('.contactDot').on('mouseover', function () {
-      $('html, body').animate({
-         scrollTop: $("#contact").offset().top + offset
-      }, 300);
-   })
-}
+//    $('.projectsDot').on('mouseover', function () {
+//       $('html, body').animate({
+//          scrollTop: $("#projects").offset().top + offset
+//       }, 300);
+//    })
+//    $('.contactDot').on('mouseover', function () {
+//       $('html, body').animate({
+//          scrollTop: $("#contact").offset().top + offset
+//       }, 300);
+//    })
+// }
 
 app.dotScroller = function () {
    let baseHeight = $("body").height();
 
    $(window).bind('scroll', function () {
       let scrollPercent = ($(window).scrollTop() / baseHeight);
-      if (scrollPercent > -1 && scrollPercent < .08) {
+      if (scrollPercent > -1 && scrollPercent < .10) {
          $('.dot').removeClass('dotSelected');
          $('.dotText').removeClass('dotTextShow')
 
@@ -45,7 +45,7 @@ app.dotScroller = function () {
          $('.dotText').addClass('dotTextShow')
 
       }
-      else if (scrollPercent > .08 && scrollPercent < .31) {
+      else if (scrollPercent > .10 && scrollPercent < .22) {
          $('.dot').removeClass('dotSelected');
 
          // $('.aboutDot').removeClass('dotSelected');
@@ -53,23 +53,39 @@ app.dotScroller = function () {
          // $('.skillsDot').removeClass('dotSelected');
          $('.aboutDot').addClass('dotSelected');
       }
-      else if (scrollPercent > .31 && scrollPercent < .43) {
+      else if (scrollPercent > .22 && scrollPercent < .35) {
          $('.dot').removeClass('dotSelected');
 
          // $('.aboutDot').removeClass('dotSelected');
          // $('.projectsDot').removeClass('dotSelected');
-         $('.skillsDot').addClass('dotSelected');
+         $('.section1Dot').addClass('dotSelected');
          // $('.heroDot').removeClass('dotSelected');
       }
-      else if (scrollPercent > .43 && scrollPercent < .76) {
+      else if (scrollPercent > .35 && scrollPercent < .49) {
          $('.dot').removeClass('dotSelected');
 
          // $('.skillsDot').removeClass('dotSelected');
          // $('.contactDot').removeClass('dotSelected');
-         $('.projectsDot').addClass('dotSelected');
+         $('.section2Dot').addClass('dotSelected');
          // $('.heroDot').removeClass('dotSelected');
       }
-      else if (scrollPercent > .76) {
+      else if (scrollPercent > .49 && scrollPercent < .64) {
+         $('.dot').removeClass('dotSelected');
+
+         // $('.aboutDot').removeClass('dotSelected');
+         // $('.projectsDot').removeClass('dotSelected');
+         $('.section3Dot').addClass('dotSelected');
+         // $('.heroDot').removeClass('dotSelected');
+      }
+      else if (scrollPercent > .64 && scrollPercent < .79) {
+         $('.dot').removeClass('dotSelected');
+
+         // $('.aboutDot').removeClass('dotSelected');
+         // $('.projectsDot').removeClass('dotSelected');
+         $('.section4Dot').addClass('dotSelected');
+         // $('.heroDot').removeClass('dotSelected');
+      }
+      else if (scrollPercent > .79 && scrollPercent < .87) {
          $('.dot').removeClass('dotSelected');
 
          // $('.aboutDot').removeClass('dotSelected');
@@ -77,11 +93,11 @@ app.dotScroller = function () {
          $('.contactDot').addClass('dotSelected');
          // $('.heroDot').removeClass('dotSelected');
       }
-      // else if($(window).scrollTop() / baseHeight){
+      else if($(window).scrollTop() / baseHeight){
 
-      // }
+      }
       else {
-         $('.aboutDot').removeClass('dotSelected');
+         $('.contactDot').removeClass('dotSelected');
       }
    });
 }

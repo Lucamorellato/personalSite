@@ -6,12 +6,15 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Luca Morellato</title>
    <link rel="stylesheet" type="text/css" href="styles.css">
+   <link rel="preload" href="/fonts/ChicagoFLF.ttf" as="font" type="font/tff" crossorigin="anonymous">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
    <link rel="icon" href="assets/favicon.png" sizes="16x16" type="image/png">
 </head>
 <body>
    <!-- header -->
-   <header id="landingPage">
+   <header id="landing--page">
       <!-- The Cube Area -->
       <div class="cube__gallery">
 
@@ -51,15 +54,33 @@
          </div>
       </div>
       <nav class="navDots">
-         <a href="#landingPage" class="dot heroDot dotSelected">
+         <a href="#landing--page" class="dot heroDot dotSelected">
             <span class="dotText"><p>Home</p></span>
          </a>
          <a href="#about" class="dot aboutDot">
             <span class="dotText"><p>About</p></span>
          </a>
-         <a href="#section1" class="dot skillsDot"></a>
-         <a href="#section2" class="dot projectsDot"></a>
-         <a href="#section3" class="dot contactDot"></a>
+         <a href="#section1" class="dot section1Dot">
+            <span class="dotText"><p>Project1</p></span>
+         </a>
+         <a href="#section2" class="dot section2Dot">
+            <span class="dotText"><p>Project2</p></span>
+         </a>
+         <a href="#section3" class="dot section3Dot">
+            <span class="dotText">
+               <p>Project3</p>
+            </span>
+         </a>
+         <a href="#section4" class="dot section4Dot">
+            <span class="dotText">
+               <p>Project4</p>
+            </span>
+         </a>
+         <a href="#contact" class="dot contactDot">
+            <span class="dotText">
+               <p>Contact</p>
+            </span>
+         </a>
       </nav>
    </header>
    <!-- end of header -->
@@ -69,10 +90,10 @@
       <!-- start of about section -->
       <section id="about" class="about">
          <!-- wrapper -->
-         <div class="aboutContent wrapper">
-            <article class="aboutText" >
-               <div class="cubeContainer">
-                  <div class="cubeAbout">
+         <div class="about__content wrapper">
+            <article class="about__text" >
+               <div class="about__cubeContainer">
+                  <div class="about__cube">
                      <div class="topFace">
                         <div>
                         </div>
@@ -87,9 +108,55 @@
                <p>A Front-End Developer based in Toronto. I love creating accessible and performance-focused content. I strive to learn
                new ways to solve problems by diving deep, buckling down and always striving for more.
                I have a understanding of current JavaScript conventions including ES6, jQuery, APIs, AJAX calls, and React.</p>
+               <div class="skillContainer">
+                  <p class="visuallyhidden">skills include:</p>
+                  <ul class="skillList">
+                     <li>
+                        <p class="visuallyhidden">JavaScript</p>
+                        <i title="Javascript" class="devicon-javascript-plain"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">React Framework</p>
+                        <i title="React" class="devicon-react-original"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">HTML 5</p>
+                        <i title="HTML 5" class="devicon-html5-plain"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">Git and GitHub</p>
+                        <i title="Git + GitHub" class="devicon-git-plain"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">CSS 3</p>
+                        <i title="CSS 3" class="devicon-css3-plain"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">Sass and SCSS</p>
+                        <i title="SASS/SCSS" class="devicon-sass-original"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">jQuery Framework</p>
+                        <i title="jQuery" class="devicon-jquery-plain"></i>
+                     </li>
+                     <li>
+                        <p class="visuallyhidden">Firebase</p>
+                        <svg title="Firebase" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                           width="40px" height="41.2px" viewBox="0 0 256 351" enable-background="new 0 0 20 20" xml:space="preserve">
+                           <path fill="#231F20" d="M0,282.998l2.123-2.973L102.527,89.512l0.212-2.017L58.479,4.358c-3.708-6.964-14.148-5.204-15.365,2.592
+                        	L0,282.998z" />
+                           <path fill="#231F20" d="M135.005,150.381l32.955-33.751l-32.964-62.93c-3.13-5.957-11.867-5.974-14.963,0l-17.612,33.589v2.861
+                        	L135.005,150.381z" />
+                           <path fill="#231F20" d="M139.121,347.551l116.275-64.848L222.191,78.209c-1.039-6.398-8.888-8.928-13.467-4.34L0,282.998
+                        	l115.608,64.547C122.915,351.625,131.812,351.627,139.121,347.551" />
+                        </svg>
+
+                     </li>
+                  </ul>
+               </div>
             </article>
-            <div class="aboutImage">
-               <img src="./assets/Luca.png" alt="a portrait of Luca Morellato infront of a concrete wall">
+            <div class="about__image">
+               <img src="./assets/Luca.png" title="A butthead ¯\_(ツ)_/¯" alt="a portrait of Luca Morellato infront of a concrete wall">
             </div> 
          </div>
       </section>
@@ -98,17 +165,17 @@
       <!-- beginning of section 1 -->
       <section id="section1" class="section1">
          <!-- wrapper -->
-         <div class="section1Content wrapper">
+         <div class="section1__content wrapper">
             <!-- image div -->
-            <div class="section1Image">
-               <img src="./assets/hotdog.png" alt="a screen shot of hotdog road trip website">
+            <div class="section1__image">
+               <img title="✧･ﾟ: *✧･ﾟ:*Ｒｕｎ Ｆｏｒｅｃａｓｔ Ｒｕｎ*:･ﾟ✧*:･ﾟ✧" src="./assets/runforecast.png" alt="A screenshot of Run Forecast Run website">
             </div>
             <!-- text div -->
-            <article class="section1Text">
-               <h2>Run Forecast Run</h2>
-               <h3>ES6 // API // JQuery // Pair Programming // Responsive</h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas repellendus libero? Animi culpa quia, reiciendis, aperiam nihil eos velit consectetur itaque. </p>
-               <div class="buttonContainer">
+            <article class="section1__text">
+               <h2 class="section1__text--heading visuallyhidden">Run Forecast Run</h2>
+               <h3 class="section1__text--heading2"><span class="visuallyhidden">Skills used:</span>ES6 | RESTful API | JQuery | Pair Programming | Responsive | HTML5 | SASS</h3>
+               <p class="section1__text--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas repellendus libero? Animi culpa quia, Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, aliquid?reiciendis, aperiam nihil eos velit consectetur itaque.</p>
+               <div class="section1__text--buttonContainer">
                   <a target="_blank" href="">view git</a>
                   <a target="_blank" href="http://lucamorellato.com/runForecast/">view live</a>
                </div>
@@ -120,29 +187,84 @@
       <!-- start of section 2 -->
       <section id="section2" class="section2">
          <!-- wrapper -->
-         <div class="section2Content wrapper">
+         <div class="section2__content wrapper">
+            <!-- image div -->
+            <div class="section2__image">
+               <img title="【﻿Ｈｏｔ　Ｄｏｇ　Ｒｏａｄ　Ｔｒｉｐ】" src="./assets/hotdog.png" alt="a screen shot of hotdog road trip website">
+            </div>
             <!-- text div -->
-            <article class="section2Text">
-               <h2>Hot Dog Road Trip</h2>
-               <h3>HTML // CSS // JavaScript // JQuery </h3>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas repellendus libero? Animi
-                  culpa quia, reiciendis, aperiam nihil eos velit consectetur itaque. </p>
-                  <div class="buttonContainer">
-                     <a target="_blank" href="">view git</a>
-                     <a target="_blank" href="http://lucamorellato.com/hotDogRoadTrip/">view live</a>
-                  </div>
-               </article>
-               <!-- image div -->
-               <div class="section2Image">
-                  <img src="./assets/hotdog.png" alt="a screen shot of hotdog road trip website">
+            <article class="section2__text">
+               <div class="section2__text--landscape">
+                  <h2 class="visuallyhidden section2__text--heading">Hot Dog Road Trip</h2>
+                  <h3 class="section2__text--heading2">ES6 | JQuery | Map API | Responsive | HTML5 | SASS </h3>
+                  <p class="section2__text--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas repellendus libero? Animi culpa quia, reiciendis, aperiam nihil eos velit consectetur itaque.</p>
                </div>
+               <div class="section2__buttonContainer">
+                  <a target="_blank" href="">view git</a>
+                  <a target="_blank" href="http://lucamorellato.com/hotDogRoadTrip/">view live</a>
+               </div>
+            </article>
+               
       </section>
       <!-- end of section 2 -->
-      <section id="section3" class="section3"></section>
-      <!-- <section id="section4" class="section4"></section>
-      <section id="section5" class="section5"></section> -->
+
+      <!-- start of section 3 -->
+      <section id="section3" class="section3">
+         <div class="section3__content wrapper">
+            <article class="section3__text">
+               <h2 class="section3__text--heading visuallyhidden">Rest Stop Reviews</h2>
+               <h3 class="section3__text--heading2"><span class="visuallyhidden">Skills used:</span>React.js | ES6 | Firebase | Responsive | HTML5 | CSS3  </h3>
+               <p class="section3__text--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas
+                  repellendus libero? Animi Lorem ipsum dolor sit amet.
+                  culpa quia, reiciendis, aperiam nihil eos velit consectetur itaque. </p>
+               <div class="section3__text--buttonContainer"">
+                  <a target="_blank" href="">view git</a>
+                  <a target="_blank" href="https://rest-stop-review.firebaseapp.com/">view live</a>
+               </div>
+            </article>
+            <div class="section3__image">
+               <img title="エｴｪｪｪ Ｒｅｓｔ－Ｓｔｏｐ　Ｒｅｖｉｅｗ ｪｪｪｴエ" src="./assets/rest.png" alt="a screen shot of Reststop Reviews Website">
+            </div>                      
+         </div>
+      </section>
+      <!-- end of section 3 -->
+
+      <!-- start of section 4 -->
+      <section id="section4" class="section4">
+         <div class="section4__content wrapper">
+            <!-- image div -->
+            <div class="section4__image">
+               <img title="╱╲╱╳╲╱╲Ｇａｒｂａｇｅ　Ｓｏｒｔｅｒ╱╲╱╳╲╱╲" src="./assets/garbage.png" alt="a screen shot of Garbage Sorter Website">
+            </div>
+            <!-- text div -->
+            <article class="section4__text">
+               <div class="section4__text--landscape">
+                  <h2 class="visuallyhidden section4__text--heading">Garbage Sorter</h2>
+                  <h3 class="section4__text--heading2"><span class="visuallyhidden">Skills include:</span>React.js | ES6 |  RESTful API | Firebase | Responsive | HTML5 | CSS3 </h3>
+                  <p class="section4__text--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas repellendus libero? Animi culpa quia, reiciendis, aperiaasd nihil eos velit consectetur itaque.</p>
+               </div>
+               <div class="section4__buttonContainer">
+                  <a target=" _blank" href="">view git</a>
+                  <a target="_blank" href="https://garbagesorter-hy.firebaseapp.com/">view live</a>
+               </div>
+            </article>
+         </div>
+      </section>
+      <!-- end of section 4 -->
+
+      <!-- start of contact section -->
+      <section id="contact" class="contact">
+         <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quae facilis incidunt!</h1>
+      </section> 
+
    </main>
    <!-- end of main -->
+
+   <footer>
+     <p>© 2018 made: <a target="_blank" href="https://www.linkedin.com/in/luca-morellato-6a252b162/">Luca Morellato</a> designed: <a target="_blank" href="https://www.candicecloutier.com/">Candice Cloutier</a></p>
+   </footer>
+
+
 
 
 

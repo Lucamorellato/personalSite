@@ -1,12 +1,12 @@
-.section1{
-   background: $runOrange;
-   // border-radius: 10px 10px 0 0;
+.section3{
+   background: $restOrange;
+   border-radius: 10px 10px 0 0;
 
    &__content{
       background: $white;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
       height: 110vh;
       border-radius: 0 0 10px 10px;
    }
@@ -17,8 +17,7 @@
       display: flex;
       justify-content: center;
       img {
-         // max-height: 50vh;
-         max-width: 50%;
+         width: 50%;
          padding: 10px;
       }
    }
@@ -26,14 +25,14 @@
    // TEXT DIV STYLES
    &__text{
       width: 40%;
-      padding-right: 75px;
+      padding-left: 75px;
       display: flex;
       flex-direction: column; 
       justify-content: center;
       &--heading2{
          font-family: $font2;
          font-size: 1.9rem;
-         margin: 0;
+          margin: 0;
          font-weight: 100;
       }
       &--p{
@@ -43,24 +42,23 @@
       &--buttonContainer{
          padding-top: 20px;
          display: flex;
-         justify-content: flex-end;
+         justify-content: flex-start;
          a {  
             font-family: $font2;
-            padding: 15px 0;
-            background: $runBlue;
+            padding: 15px 0px;
+            background: $restBlue;
             color: $white;
             text-align: center;
-            width: 130px;
             font-size: 1.6rem;
-            margin-right: 30px;
-            box-shadow: 10px 10px 0 $runOrange;
+            width: 130px;
+            margin-right: 40px;
+            box-shadow: 10px 10px 0 $restOrange;
             transition: all .2s;
-            // font-weight: bold;
          }
          a:hover {
             transform: translateX(8px) translateY(6px);
             // transform: translateX(5px);
-            box-shadow: 2px 2px 0 $runOrange;
+            box-shadow: 2px 2px 0 $restOrange;
          }
       }
    }
