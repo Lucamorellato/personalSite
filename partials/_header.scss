@@ -7,6 +7,18 @@ header {
    overflow: hidden;
 }
 
+//MOBILE HEADER
+.mobileHeader {
+   display: none;
+   @media only screen and (max-width: 500px) { 
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 20%;
+      // font-family: $font2;
+   }
+}
+
 // GLOBAL CUBE STYLES
 .cube__gallery {
    width: 100%;
@@ -17,7 +29,6 @@ header {
 
 .cube {
    position: absolute;
-   // left: 75px;
 }
 .cube5, .cube3, .cube4, .cube2, .cube1 {
    transition: transform 1s linear;

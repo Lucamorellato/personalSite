@@ -319,6 +319,15 @@ header {
   height: 100vh;
   overflow: hidden; }
 
+.mobileHeader {
+  display: none; }
+  @media only screen and (max-width: 500px) {
+    .mobileHeader {
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 20%; } }
+
 .cube__gallery {
   width: 100%;
   margin: 50vh 45vw 0 45vw;
@@ -719,7 +728,7 @@ header {
         width: 90%;
         margin: 20px 0;
         font-size: 4.5rem; } }
-    @media only screen and (max-width: 380px) {
+    @media only screen and (max-width: 500px) {
       .about__text h1 {
         font-size: 3rem;
         margin-top: 0; } }
@@ -851,9 +860,6 @@ header {
       -webkit-box-shadow: 15px 15px 0 #666666;
       box-shadow: 15px 15px 0 #666666;
       margin-right: 10px; } }
-  @media only screen and (max-width: 500px) {
-    .about__image2 img {
-      display: none; } }
 
 .about__cubeContainer {
   position: relative;
@@ -870,15 +876,15 @@ header {
   transition: transform 1.5s linear;
   transition: transform 1.5s linear, -webkit-transform 1.5s linear;
   left: 75%;
-  top: 20%; }
+  top: 10%; }
   @media only screen and (max-width: 1350px) {
     .about__cube {
       left: 65%;
-      top: 30%; } }
+      top: 20%; } }
   @media only screen and (max-width: 1100px) {
     .about__cube {
       left: 59%;
-      top: 75%; } }
+      top: 55%; } }
   .about__cube:hover {
     -webkit-transform: translate(-100px, 50px);
     -ms-transform: translate(-100px, 50px);
