@@ -1,5 +1,5 @@
 .section4{
-   background: $garbageGreen;
+   background: $garbageDarkGreen;
 
    &__content{
        background: $white;
@@ -10,12 +10,22 @@
       height: 110vh;
       border-radius: 0 0 10px 10px;
    }
+   
 
    //IMAGE DIV STYLES
    &__image{
       width: 60%;
+      @media only screen and (max-width: 1050px) { 
+         width: 80%;
+      }
+      @media only screen and (max-width: 500px) { 
+         width: 90%;
+      }
       img {
          padding: 0 0 50px 0;
+         @media only screen and (max-width: 768px) { 
+            padding-bottom: 25px;
+         }
       }
    }
 
@@ -25,9 +35,22 @@
       display: flex;
       align-items: center; 
       justify-content: space-evenly;
+      @media only screen and (max-width: 1050px) { 
+         width: 80%;
+      }
+      @media only screen and (max-width: 768px) { 
+         flex-direction: column;
+      }
+      @media only screen and (max-width: 500px) { 
+         width: 90%;
+      }
 
       &--landscape{
          width: 55%;
+         @media only screen and (max-width: 768px) { 
+            width: 100%;
+            margin-right: 0;
+         }
       }
 
       &--heading2{
@@ -44,6 +67,9 @@
       width: 45%;
       display: flex;
       justify-content: center;
+      @media only screen and (max-width: 768px) { 
+         width: 100%;
+      }
       a {  
          font-family: $font2;
          width: 130px;
@@ -55,6 +81,11 @@
          margin-right: 30px;
          box-shadow: 10px 10px 0 $garbageGreen;
          transition: all .2s;
+         @media only screen and (max-width: 768px) { 
+            &:last-child{
+               margin-right: 0;
+            }
+         }
       }
       a:hover {
          transform: translateX(8px) translateY(6px);

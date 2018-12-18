@@ -11,6 +11,7 @@
 
 // NAV BAR STYLES
 header .navDots {
+   
    position: fixed;
    bottom: 0;
    top: 0;
@@ -26,7 +27,6 @@ header .navDots {
    justify-content: center;
    align-self: center;
    align-items: flex-end;
-   padding: 5px;
    z-index: 10000; 
 }
 header .navDots .dot {
@@ -34,9 +34,9 @@ header .navDots .dot {
    width: 40px;
    // width: 18px;
    height: 10px;
-   background: rgba(102, 102, 102, 0.543);
+   background: rgba(152, 143, 143, 0.543);
    border-radius: 8px;
-   margin-top: 30px;
+   margin-top: 40px;
    -webkit-transition: all 0.15s ease-in;
    transition: all 0.15s ease-in-out; 
 }
@@ -44,7 +44,7 @@ header .navDots .dotSelected {
    background: $black;
    // -webkit-transform: scale(1.3);
    // transform: scale(1.2); 
-   width: 60px;
+   width: 55px;
    // height: 10px;
 }
 
@@ -59,9 +59,10 @@ header .navDots .dotSelected {
    opacity: 0;
    letter-spacing: 1px;
    p {
-      font-size: 5rem;
+      font-size: 4.5rem;
       margin: 0;
       padding-right: 30px;
+
    }
 }
 

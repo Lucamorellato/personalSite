@@ -1,13 +1,120 @@
-#contact {
-   height: 110vh;
+#contact { 
+   height: 97vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   @media only screen and (max-width: 550px) { 
+      height:70vh;
+   }
+
+
+   h4 {
+      position: absolute;
+      font-size: 3rem;
+      bottom: 40%;
+      right: 40%;
+      opacity: 0;
+      transition: opacity .2s;
+      // padding: 40px;
+      @media only screen and (max-width: 700px) {
+         bottom: 23%;
+         right: 30%;
+      }
+      @media only screen and (max-width: 550px) { 
+         display: none;
+      }
+   }
+   h4:hover {
+      opacity: 1;
+   }
+}
+.contact__buttonContainer {
+   display: flex;
+   flex-wrap: wrap;
+   width: 80%;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 5vh;
+
+   
+   a {  
+      font-family: $font2;
+      width: 130px;
+      border: 5px solid #666666;
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 15px 0px;
+      background: #969696;
+      color:$black;
+      box-shadow: 5px 5px 0 #555454, 10px 10px 0 #555454;
+      transition: all .2s;
+       @media only screen and (max-width: 550px) { 
+         margin: 10px;
+      }
+   }
+   a:hover {
+      transform: translateX(8px) translateY(6px);
+      // transform: translateX(5px);
+      box-shadow: 2px 2px 0 #555454;
+      border: 5px solid #666666;
+   }
 }
 
+
+.imageContainer {
+   // padding: 5vh;
+   display: flex;
+   width: 70%;
+   // height: 131vh;
+   position: relative;
+   @media only screen and (max-width: 900px) { 
+      padding: 0;
+   }
+   @media only screen and (max-width: 550px) { 
+      display: none;
+   }
+
+
+   .imageLeft2{
+      position: relative;
+      right: -25%;
+   }
+   .imageRight2 {
+      position: relative;
+      left: -25%;
+   }
+}
+
+.responsiveModule {
+   display: none;
+   width: 100vw;
+   height: 1000vh;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   z-index: 10;
+   background: black;
+   color: white;
+}
+.sneaky {
+   display: block;
+}
 footer {
+   height: 3vh;
    margin: 0 auto;
    text-align: center;
    font-weight: 100;
    font-family: $font2;
    font-size: 1.6rem;
+   @media only screen and (max-width: 400px) { 
+      height: 5vh;
+      font-size:1.8rem;
+   }
+   p {
+      margin: 0;
+      padding-bottom: 20px;
+   }
    a{
       color: $black;
       text-decoration: underline;

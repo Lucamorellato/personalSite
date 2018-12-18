@@ -10,6 +10,7 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="icon" href="assets/favicon.png" sizes="16x16" type="image/png">
 </head>
 <body>
@@ -61,19 +62,19 @@
             <span class="dotText"><p>About</p></span>
          </a>
          <a href="#section1" class="dot section1Dot">
-            <span class="dotText"><p>Project1</p></span>
+            <span class="dotText"><p>Run</p></span>
          </a>
          <a href="#section2" class="dot section2Dot">
-            <span class="dotText"><p>Project2</p></span>
+            <span class="dotText"><p>HotDog</p></span>
          </a>
          <a href="#section3" class="dot section3Dot">
             <span class="dotText">
-               <p>Project3</p>
+               <p>RestStop</p>
             </span>
          </a>
          <a href="#section4" class="dot section4Dot">
             <span class="dotText">
-               <p>Project4</p>
+               <p>Garbage</p>
             </span>
          </a>
          <a href="#contact" class="dot contactDot">
@@ -104,7 +105,12 @@
                      </div>
                   </div>
                </div>
-               <h1>Luca Morellato <span class="lower">Front End Developer</span></h1>
+               <div class="about__headerContainer">
+                  <h1>Luca Morellato <span class="lower">Front End Developer</span></h1>
+                  <div class="about__image2">
+                     <img src="./assets/Luca.png" title="A butthead ¯\_(ツ)_/¯" alt="a portrait of Luca Morellato infront of a concrete wall">
+                  </div>
+               </div>
                <p>A Front-End Developer based in Toronto. I love creating accessible and performance-focused content. I strive to learn
                new ways to solve problems by diving deep, buckling down and always striving for more.
                I have a understanding of current JavaScript conventions including ES6, jQuery, APIs, AJAX calls, and React.</p>
@@ -213,11 +219,11 @@
          <div class="section3__content wrapper">
             <article class="section3__text">
                <h2 class="section3__text--heading visuallyhidden">Rest Stop Reviews</h2>
-               <h3 class="section3__text--heading2"><span class="visuallyhidden">Skills used:</span>React.js | ES6 | Firebase | Responsive | HTML5 | CSS3  </h3>
+               <h3 class="section3__text--heading2"><span class="visuallyhidden">Skills used:</span>React.js | ES6 | Firebase | HTML5 | Responsive | CSS3  </h3>
                <p class="section3__text--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ad ex. Fuga quas
                   repellendus libero? Animi Lorem ipsum dolor sit amet.
                   culpa quia, reiciendis, aperiam nihil eos velit consectetur itaque. </p>
-               <div class="section3__text--buttonContainer"">
+               <div class="section3__text--buttonContainer">
                   <a target="_blank" href="">view git</a>
                   <a target="_blank" href="https://rest-stop-review.firebaseapp.com/">view live</a>
                </div>
@@ -234,7 +240,7 @@
          <div class="section4__content wrapper">
             <!-- image div -->
             <div class="section4__image">
-               <img title="╱╲╱╳╲╱╲Ｇａｒｂａｇｅ　Ｓｏｒｔｅｒ╱╲╱╳╲╱╲" src="./assets/garbage.png" alt="a screen shot of Garbage Sorter Website">
+               <img title="╱╲╱╳╲╱╲Ｇａｒｂａｇｅ-Ｓｏｒｔｅｒ╱╲╱╳╲╱╲" src="./assets/garbage.png" alt="a screen shot of Garbage Sorter Website">
             </div>
             <!-- text div -->
             <article class="section4__text">
@@ -254,19 +260,37 @@
 
       <!-- start of contact section -->
       <section id="contact" class="contact">
-         <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quae facilis incidunt!</h1>
+         <div class="contact__buttonContainer">
+            <a title="luca.morellato@gmail.com" target=" _blank" href="mailto:luca.morellato@gmail.com?Subject=Hey%20Pal">contact me</a>
+            <a target=" _blank" title="★彡彡Ｌｉｎｋｅｄｉｎミミ★" href="https://www.linkedin.com/in/luca-morellato-6a252b162/">linkedin</a>
+            <a target=" _blank" title="・゜-: ✧ :-　ｔｗｉｔｔｅｒ　-: ✧ :-゜・" href="https://twitter.com/LucaMoDev">twitter</a>
+            <a target=" _blank" title="├┬┴┬┴ＧｉｔＨｕｂ┬┴┬┴┤" href="https://github.com/Lucamorellato">github</a>
+            <a target="_blank" title="‹—•°º¤°( ｒｅｓｕｍ é )°¤º°•—›"href="">resumé</a>
+         </div>
+         <div class="imageContainer">
+            <div data-aos="fade-right"
+            data-aos-duration="1200"
+            data-aos-offset="400" class="imageLeft2">
+               <img id="image" src="./assets/boxLeft.png" alt="">
+            </div>
+            <div data-aos="fade-left"
+            data-aos-duration="1200"
+            data-aos-offset="400" class="imageRight2">
+               <img src="./assets/boxRight.png" alt="">
+            </div>
+            <h4>HIRE ME PLS</h4>
+         </div>
       </section> 
+      <div class="responsiveModule">
+         <h1>OH SO RESPONSIVE</h1>
+      </div>
 
    </main>
    <!-- end of main -->
 
    <footer>
-     <p>© 2018 made: <a target="_blank" href="https://www.linkedin.com/in/luca-morellato-6a252b162/">Luca Morellato</a> designed: <a target="_blank" href="https://www.candicecloutier.com/">Candice Cloutier</a></p>
+     <p>© 2018 made: <a title="¯\_(ツ)_/¯" target="_blank" href="https://www.linkedin.com/in/luca-morellato-6a252b162/">Luca Morellato</a> designed: <a title="-♥-♡--^[ Candice Cloutier ]^--♡-♥-" target="_blank" href="https://www.candicecloutier.com/">Candice Cloutier</a></p>
    </footer>
-
-
-
-
 
 
 
@@ -275,6 +299,10 @@
    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
    crossorigin='anonymous'></script>   
    <script type="text/javascript" src="script/script.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
    <!-- SCRIPT IMPORTS -->
 
 </body>

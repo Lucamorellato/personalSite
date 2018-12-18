@@ -1,39 +1,9 @@
-
 const app = {}
 
-// app.animations = function () {
-//    let offset = 20;
-//    $('.aboutDot').on('click', function () {
-//       $('html, body').animate({
-//          scrollTop: $("#about").offset().top + offset
-//       }, 300);
-//    })
-//    $('.skillsDot').on('mouseover', function () {
-//       $('html, body').animate({
-//          scrollTop: $("#skills").offset().top + offset
-//       }, 300);
-//    })
-
-//    $('.heroDot').on('mouseover', function () {
-//       // $('.dotText').addClass('dotTextShow');
-//    })
-
-//    $('.projectsDot').on('mouseover', function () {
-//       $('html, body').animate({
-//          scrollTop: $("#projects").offset().top + offset
-//       }, 300);
-//    })
-//    $('.contactDot').on('mouseover', function () {
-//       $('html, body').animate({
-//          scrollTop: $("#contact").offset().top + offset
-//       }, 300);
-//    })
-// }
-
-app.dotScroller = function () {
+app.navScroller = function () {
    let baseHeight = $("body").height();
 
-   $(window).bind('scroll', function () {
+   $(window).on('scroll', function () {
       let scrollPercent = ($(window).scrollTop() / baseHeight);
       if (scrollPercent > -1 && scrollPercent < .10) {
          $('.dot').removeClass('dotSelected');
@@ -103,14 +73,63 @@ app.dotScroller = function () {
 }
 
 
+app.throttling = function (callback, limit, time) {
+   /// monitor the count
+   let calledCount = 0;
+
+   /// refesh the `calledCount` varialbe after the `time` has been passed
+   setInterval(function () { calledCount = 0 }, time);
+
+   /// creating a clousre that will be called
+   return function () {
+      /// checking the limit (if limit is exceeded then do not call the passed function
+      if (limit > calledCount) {
+         /// increase the count
+         calledCount++;
+         callback(); /// call the function
+      }
+      else console.log('not calling because the limit has exeeded');
+   };
+}
+
+
+
+
+// app.windowWidthScanner = () => {
+//    let baseWidth = $(window).width();
+//    app.baseWidth = baseWidth
+
+//    $(window).on("resize", function () {
+//    let resizeWidth = $(window).width();
+   
+   
+//       if (resizeWidth != app.baseWidth) {
+//          console.log('inside if')
+
+//          $(".responsiveModule").addClass("sneaky")
+
+//          setTimeout(function () {
+//             $(".responsiveModule").removeClass("sneaky")
+//             console.log("timeout")
+//          }, 800);
+//          // // let app.baseWidth = resizeWidth;
+//       }
+//    })
+// }
+
+
+
+
+
+
 
 app.init = function () {
-   app.dotScroller()
-   app.animations()
+   app.navScroller()
+   app.windowWidthScanner()
 }
+
 
 
 $(function () {
    app.init();
-
 })

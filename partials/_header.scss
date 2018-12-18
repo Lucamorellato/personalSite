@@ -2,15 +2,16 @@
 header {
    background: $yellow;
    display: flex;
-   justify-content: center;
-   align-items: center;
+   align-items: flex-start;
    height: 100vh;
+   overflow: hidden;
 }
 
 // GLOBAL CUBE STYLES
 .cube__gallery {
-   margin-top: 40vh;
-   align-self: flex-start;
+   width: 100%;
+   // margin-top: 50vh;
+   margin: 50vh 45vw 0 45vw;
    position: relative;
 }
 
