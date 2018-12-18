@@ -17,10 +17,10 @@ header {
 
 .cube {
    position: absolute;
-   left: 75px;
+   // left: 75px;
 }
-.cube2, .cube1 {
-   transition: transform 1.5s linear;
+.cube5, .cube3, .cube4, .cube2, .cube1 {
+   transition: transform 1s linear;
    transform: translate(101px, 57px);
    &:hover {
       transform: translate(27px, 100px);
@@ -115,6 +115,90 @@ header {
 }
 
 .cube3 {
+   bottom: 90px;
+   z-index: 6;
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 90px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 90px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}
+
+.cube5 {
+   bottom: 180px;
+   z-index: 6;
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 90px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 90px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}
+
+
+
+.cubeEnd {
    margin-left: -223px;
    bottom: 189px;
    transform: translate(101px, 57px);
@@ -139,6 +223,108 @@ header {
       background: #666666;
       left: 112px;
       top: 6px;
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}
+
+.cube4 {
+   z-index: 5;
+   bottom: 154px;
+   margin-left: -111px;
+
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 90px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 90px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+      p {
+         text-align: center;
+         font-size: 2rem;
+      }
+   }
+
+   .topFace div {
+      width: 112px;
+      height: 90px;
+      transform: skewY(-30deg) scaleY(1.16);
+      background: #555454;
+      font-size: 0.862em;
+   }
+
+   .topFace {
+      transform: rotate(60deg);
+      bottom: -19px;
+      left: 45px;
+      // background: red;
+   }
+}
+
+.cube9 {
+   bottom: 130px;
+   margin-left: -155px;
+
+   transition: all 1s linear;
+   transform: translate(-79px, -7px);
+   &:hover {
+      transform: translate(-200px, -50px);
+      // (500px, 200px);
+      // margin: 50px;
+      // bottom: 120px;
+   }
+
+   .rightFace,
+   .leftFace,
+   .topFace {
+   position: absolute;
+   }
+
+   .leftFace {
+      width: 112px;
+      height: 90px;
+      transform: skewY(30deg);
+      background: #969696;
+   }
+
+   .rightFace {
+      width: 90px;
+      height: 90px;
+      transform: skewY(-30deg);
+      background: #666666;
+      left: 112px;
+      top: 6px;
+      p {
+         text-align: center;
+         font-size: 2rem;
+      }
    }
 
    .topFace div {

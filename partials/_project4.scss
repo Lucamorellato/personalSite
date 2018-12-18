@@ -1,5 +1,9 @@
 .section4{
    background: $garbageDarkGreen;
+      height: 125vh;
+   @media only screen and (max-width: 600px) { 
+      height: 135vh;
+   }
 
    &__content{
        background: $white;
@@ -7,8 +11,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 110vh;
+      height: 115vh;
       border-radius: 0 0 10px 10px;
+      @media only screen and (max-width: 600px) { 
+         height: 125vh;
+      }
    }
    
 
@@ -20,6 +27,9 @@
       }
       @media only screen and (max-width: 500px) { 
          width: 90%;
+      }
+      @media only screen and (max-width: 380px) { 
+         width: 75%;
       }
       img {
          padding: 0 0 50px 0;
@@ -44,6 +54,7 @@
       @media only screen and (max-width: 500px) { 
          width: 90%;
       }
+      
 
       &--landscape{
          width: 55%;
@@ -58,9 +69,15 @@
          font-size: 1.9rem;
          margin: 0;
          font-weight: 100;
+         @media only screen and (max-width: 380px) { 
+            font-size: 1.6rem;
+         }
       }
       &--p{
          font-size: 1.8rem;
+         @media only screen and (max-width: 380px) { 
+            font-size: 1.6rem;
+         }
       }
    }
    &__buttonContainer{

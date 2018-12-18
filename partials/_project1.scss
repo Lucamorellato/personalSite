@@ -1,12 +1,14 @@
 .section1{
    background: $runOrange;
-   // border-radius: 10px 10px 0 0;
+   @media only screen and (max-width: 500px) { 
+      height: 140vh;
+   }
 
    &__content{
       background: $white;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
       height: 110vh;
       border-radius: 0 0 10px 10px;
       @media only screen and (max-width: 768px) { 
@@ -14,7 +16,7 @@
         justify-content: space-evenly;
       }
       @media only screen and (max-width: 500px) { 
-         height: 115vh;
+         height: 130vh;
       }
    }
 
@@ -35,6 +37,10 @@
          @media only screen and (max-width: 500px) { 
             max-height: 50vh;
          }
+         @media only screen and (max-width: 380px) { 
+            max-height: 40vh;
+            padding-bottom: 15px;
+         }
       }
    }
 
@@ -45,12 +51,14 @@
       display: flex;
       flex-direction: column; 
       justify-content: center;
+      align-items: flex-start;
       @media only screen and (max-width: 1100px) { 
          padding-right: 50px;
       }
       @media only screen and (max-width: 768px) { 
          width: 80%;
          padding-right: 0;
+         align-items: center;
       }
       @media only screen and (max-width: 500px) { 
          width: 90%
@@ -59,22 +67,39 @@
          font-family: $font2;
          font-size: 1.9rem;
          margin: 0;
+         width: 85%;
          font-weight: 100;
+         @media only screen and (max-width: 768px) { 
+            width: 100%
+         }
+         @media only screen and (max-width: 380px) { 
+            font-size: 1.6rem;
+         }
       }
       &--p{
          margin: 30px 0;
          font-size: 1.8rem;
+         width: 85%;
          @media only screen and (max-width: 768px) { 
             margin: 15px 0;
+            width: 100%;
+         }
+         @media only screen and (max-width: 380px) { 
+            font-size: 1.6rem;
+         }
+         a {
+            color: $black;
          }
       }
       &--buttonContainer{
          padding-top: 20px;
          display: flex;
+         width: 85%;
          justify-content: flex-end;
          @media only screen and (max-width: 768px) { 
+            padding-top: 10px;
+            width: 100%;
             justify-content: center;
-            padding-top: 0;
          }
 
          a {  

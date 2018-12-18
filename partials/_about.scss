@@ -2,6 +2,9 @@
 //ABOUT SECTION STYLES
 .about {
    background: $yellow;
+   @media only screen and (max-width: 500px) { 
+         height: 140vh;
+      }
 }
 
 .about{
@@ -18,7 +21,7 @@
          justify-content: center;
       }
       @media only screen and (max-width: 500px) { 
-         height: 115vh;
+         height: 130vh;
       }
    }
 
@@ -46,12 +49,28 @@
             padding: 0;
             text-align: justify;
          }
+         @media only screen and (max-width: 380px) { 
+            font-size: 1.6rem;
+         }
+      }
+
+      .linkp {
+         padding-top: 15px;
+         a {
+            color: $black;
+            letter-spacing: 1.5px;
+            transition: color .3s;
+            &:hover {
+               color: $yellow;
+            }
+         }
       }
       h1{
          font-size: 6rem;
          text-transform: lowercase;
          font-family: $font2;
          font-weight: 100;
+         margin: 0;
          @media only screen and (max-width: 1000px) {
             width: 60%;
          } 
@@ -59,6 +78,10 @@
             width: 90%;
             margin: 20px 0;
             font-size: 4.5rem;
+         }
+         @media only screen and (max-width: 380px) { 
+            font-size: 3rem;
+            margin-top: 0;
          }
       }
       .lower {
@@ -70,6 +93,13 @@
          font-weight: 300;
          @media only screen and (max-width: 768px) { 
             font-size: 2.5rem;
+         }
+         @media only screen and (max-width: 500px) { 
+            text-decoration: underline;
+         }
+         @media only screen and (max-width: 380px) { 
+            font-size: 1.8rem;
+            margin-top: 10px;
          }
       }
    }
@@ -99,9 +129,6 @@
       }
       li {
          margin-left: 20px;
-         &:last-child {
-            margin: 0;
-         }
          @media only screen and (max-width: 768px) { 
             margin-left: 5px;
          }
@@ -150,7 +177,7 @@
          align-items: center;
       }
       @media only screen and (max-width: 768px) {
-         width: 50%;
+         width: 40%;
       }
       img {
          @media only screen and (max-width: 1000px) {
@@ -159,8 +186,7 @@
             margin-right: 10px;
          }
          @media only screen and (max-width: 500px) { 
-            width: 50%;
-            box-shadow: 7px 7px 0 #666666;
+            display: none;
          }
       }
    }
@@ -169,7 +195,7 @@
    &__cubeContainer {
       position: relative;
       height: 100px;
-      @media only screen and (max-width: 1000px) { 
+      @media only screen and (max-width: 1100px) { 
          display: none;
       }
    }
@@ -179,14 +205,12 @@
       left: 75%;
       top: 20%;
       @media only screen and (max-width: 1350px) {
-         left: 64%;
+         left: 65%;
+         top: 30%;
       }
-      @media only screen and (max-width: 1050px) {
+      @media only screen and (max-width: 1100px) {
          left: 59%;
-         top: 40%;
-      }
-      @media only screen and (max-width: 900px) { 
-         left: 50%;
+         top: 75%;
       }
 
       &:hover {
