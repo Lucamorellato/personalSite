@@ -614,9 +614,9 @@ header {
   -ms-transform: translate(-79px, -7px);
   transform: translate(-79px, -7px); }
   .cube9:hover {
-    -webkit-transform: translate(-200px, -50px);
-    -ms-transform: translate(-200px, -50px);
-    transform: translate(-200px, -50px); }
+    -webkit-transform: translate(-200px, -60px);
+    -ms-transform: translate(-200px, -60px);
+    transform: translate(-200px, -60px); }
   .cube9 .rightFace,
   .cube9 .leftFace,
   .cube9 .topFace {
@@ -796,7 +796,11 @@ header {
   .about__image img {
     width: 70%;
     -webkit-box-shadow: 15px 15px 0 #666666;
-    box-shadow: 15px 15px 0 #666666; }
+    box-shadow: 15px 15px 0 #666666;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     @media only screen and (max-width: 1200px) {
       .about__image img {
         width: 80%; } }
@@ -805,7 +809,9 @@ header {
         width: 65%; } }
     @media only screen and (max-width: 600px) {
       .about__image img {
-        width: 75%; } }
+        width: 75%;
+        -webkit-box-shadow: 7px 7px 0 #666666;
+        box-shadow: 7px 7px 0 #666666; } }
 
 .section1 {
   background: #e69575; }
@@ -916,6 +922,8 @@ header {
           font-size: 1.6rem; } }
       .section1__text--p a {
         color: #171717; }
+      .section1__text--p a:hover {
+        text-decoration: underline; }
     .section1__text--buttonContainer {
       padding-top: 20px;
       display: -webkit-box;
@@ -1315,6 +1323,8 @@ header {
           font-size: 1.6rem; } }
       .section4__text--p a {
         color: #171717; }
+      .section4__text--p a:hover {
+        text-decoration: underline; }
   .section4__buttonContainer {
     width: 40%;
     display: -webkit-box;
@@ -1369,7 +1379,7 @@ header {
   align-items: center; }
   @media only screen and (max-width: 550px) {
     #contact {
-      height: 80vh; } }
+      height: 90vh; } }
   #contact h4 {
     position: absolute;
     font-size: 3rem;
@@ -1467,6 +1477,7 @@ footer {
   @media only screen and (max-width: 400px) {
     footer {
       height: 5vh;
+      margin-top: 15vh;
       font-size: 1.8rem; } }
   footer p {
     margin: 0;

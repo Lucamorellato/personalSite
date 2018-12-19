@@ -91,6 +91,9 @@
          a {
             color: $black;
          }
+         a:hover{
+            text-decoration: underline;
+         }
       }
       &--buttonContainer{
          padding-top: 20px;
