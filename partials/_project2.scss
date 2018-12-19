@@ -13,7 +13,7 @@
 
    //IMAGE DIV STYLES
    &__image{
-      width: 60%;
+      width: 65%;
       @media only screen and (max-width: 1050px) { 
          width: 80%;
       }
@@ -34,12 +34,12 @@
 
    // TEXT DIV STYLES
    &__text{
-      width: 60%;
+      width: 75%;
       display: flex;
       align-items: center; 
       justify-content: space-evenly;
       @media only screen and (max-width: 1050px) { 
-         width: 80%;
+         width: 90%;
       }
       @media only screen and (max-width: 768px) { 
          flex-direction: column;
@@ -50,7 +50,7 @@
       
 
       &--landscape{
-         width: 55%;
+         width: 60%;
          margin-right: 40px;
          @media only screen and (max-width: 768px) { 
             width: 100%;
@@ -75,11 +75,12 @@
       }
    }
    &__buttonContainer{
-      width: 45%;
+      width: 40%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       @media only screen and (max-width: 768px) { 
          width: 100%;
+         justify-content: center;
       }
       a {  
          font-family: $font2;
@@ -92,10 +93,8 @@
          margin-right: 30px;
          box-shadow: 10px 10px 0 $hotOrange;
          transition: all .2s;
-         @media only screen and (max-width: 768px) { 
-            &:last-child{
-               margin-right: 0;
-            }
+         &:last-child{
+            margin-right: 0;
          }
       }
       a:hover {

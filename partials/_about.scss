@@ -16,7 +16,7 @@
       // align-items: center;
       height: 110vh;
       @media only screen and (max-width: 1000px) { 
-         flex-direction: column;
+         flex-direction: column-reverse;
          align-items: center;
          justify-content: center;
       }
@@ -32,22 +32,27 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      // align-items: center;
       text-align: right;
       @media only screen and (max-width: 1000px) { 
          width: 80%;
+         text-align: left;
+         padding: 0 0 40px 0;
       }
       @media only screen and (max-width: 768px) { 
-         padding: 0 0 40px 0;
-         text-align: center;
+         // text-align: center;
          width: 90%;
       }
    
       p {
          padding-left: 100px;
          margin: 0;
+         @media only screen and (max-width: 1200px) { 
+            padding-left: 50px;
+         }
          @media only screen and (max-width: 1000px) {
             padding: 0;
-            text-align: justify;
+            text-align: left;
          }
          @media only screen and (max-width: 380px) { 
             font-size: 1.6rem;
@@ -60,47 +65,15 @@
             color: $black;
             letter-spacing: 1.5px;
             transition: color .3s;
+            text-decoration: underline;
             &:hover {
                color: $yellow;
             }
          }
       }
-      h1{
-         font-size: 6rem;
-         text-transform: lowercase;
+      &--heading {
+         font-size: 2.5rem;
          font-family: $font2;
-         font-weight: 100;
-         margin: 0;
-         @media only screen and (max-width: 1000px) {
-            width: 60%;
-         } 
-         @media only screen and (max-width: 768px) { 
-            width: 90%;
-            margin: 20px 0;
-            font-size: 4.5rem;
-         }
-         @media only screen and (max-width: 500px) { 
-            font-size: 3rem;
-            margin-top: 0;
-         }
-      }
-      .lower {
-         font-size: 3.5rem;
-         font-family: $font;
-         display: block;
-         text-transform: lowercase;
-         letter-spacing: 1px;
-         font-weight: 300;
-         @media only screen and (max-width: 768px) { 
-            font-size: 2.5rem;
-         }
-         @media only screen and (max-width: 500px) { 
-            text-decoration: underline;
-         }
-         @media only screen and (max-width: 380px) { 
-            font-size: 1.8rem;
-            margin-top: 10px;
-         }
       }
    }
 
@@ -118,13 +91,15 @@
       }
       @media only screen and (max-width: 768px) { 
          width: 90%;
+         padding-top: 6vh;
       }
 
       ul {
          display: flex;
-         @media only screen and (max-width: 500px) { 
+         @media only screen and (max-width: 600px) { 
             flex-wrap: wrap;
             justify-content: center;
+            align-content: center
          }
       }
       li {
@@ -135,120 +110,28 @@
       }
    }
 
-   &__headerContainer {
-      display: flex;
-      margin: 30px 0 30px 0;
-      justify-content: flex-end;
-      @media only screen and (max-width: 1000px) { 
-         justify-content: space-between;
-         align-items: center;
-      }
-      @media only screen and (max-width: 768px) { 
-         flex-direction: column;
-      }
-      @media only screen and (max-width: 500px) {
-         // margin: 15px 0;
-      }
-
-   }
    // IMAGE DIV STYLES
    &__image {
       width: 45%;
       display: flex;
       justify-content: center;
       align-items: center;
-      @media only screen and (max-width: 1000px) { 
-         display: none;
+      @media only screen and (max-width: 1200px) { 
+         // width: 40%;
       }
       img {
-         width: 55%;
+         width: 70%;
          box-shadow: 15px 15px 0 #666666;
-         @media only screen and (max-width: 900px) { 
-            width: 70%;
+        
+         @media only screen and (max-width: 1200px) { 
+            width: 80%;
          }
-      }
-   }
-   &__image2 {
-      display: none;
-      @media only screen and (max-width: 1000px) { 
-         display: flex;
-         width: 35%;
-         justify-content: center;
-         align-items: center;
-      }
-      @media only screen and (max-width: 768px) {
-         width: 40%;
-      }
-      img {
-         @media only screen and (max-width: 1000px) {
-            width: 100%;
-            box-shadow: 15px 15px 0 #666666;
-            margin-right: 10px;
+         @media only screen and (max-width: 1000px) { 
+            width: 65%;
          }
-         @media only screen and (max-width: 500px) { 
-            // display: none;
+         @media only screen and (max-width: 600px) { 
+            width: 75%;
          }
-      }
-   }
-
-   //CUBE STYLES WITHIN TEXT DIV
-   &__cubeContainer {
-      position: relative;
-      height: 100px;
-      @media only screen and (max-width: 1100px) { 
-         display: none;
-      }
-   }
-   &__cube{
-      position: relative;
-      transition: transform 1.5s linear;
-      left: 75%;
-      top: 10%;
-      @media only screen and (max-width: 1350px) {
-         left: 65%;
-         top: 20%;
-      }
-      @media only screen and (max-width: 1100px) {
-         left: 59%;
-         top: 55%;
-      }
-
-      &:hover {
-         transform: translate(-100px, 50px);
-      }
-      .rightFace,
-      .leftFace,
-      .topFace {
-      position: absolute;
-      }
-
-      .leftFace {
-         width: 112px;
-         height: 90px;
-         transform: skewY(30deg);
-         background: #969696;
-      }
-
-      .rightFace {
-         width: 90px;
-         height: 90px;
-         transform: skewY(-30deg);
-         background: #666666;
-         left: 112px;
-         top: 6px;
-      }
-      .topFace div {
-         width: 112px;
-         height: 90px;
-         transform: skewY(-30deg) scaleY(1.16);
-         background: #555454;
-         font-size: 0.862em;
-      }
-      .topFace {
-         transform: rotate(60deg);
-         bottom: -19px;
-         left: 45px;
-         // background: red;
       }
    }
 }

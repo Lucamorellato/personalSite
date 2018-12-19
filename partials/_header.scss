@@ -6,16 +6,34 @@ header {
    height: 100vh;
    overflow: hidden;
 }
-
-//MOBILE HEADER
-.mobileHeader {
-   display: none;
-   @media only screen and (max-width: 500px) { 
-      display: block;
+//landingPage Text
+.landing {
+   &__header {
       position: absolute;
-      bottom: 10px;
-      left: 20%;
-      // font-family: $font2;
+      bottom: 2%;
+      left: 5%;
+      font-family: $font2;
+      display: flex;
+      // flex-direction: column;
+      // font-size: 6.6rem;
+      font-size: 2.5rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+      text-transform: lowercase;
+      // @media only screen and (max-width: 600px) { 
+      //    font-size: 5rem;
+      //    bottom: 0;
+      // }
+      .lower2 {
+         font-family: $font2;
+         text-transform: capitalize;
+         // font-size: 3.5rem;
+         text-align: right;
+         // @media only screen and (max-width: 600px) { 
+         //    font-size: 2rem;
+         //    text-align: left;
+         // }
+      }
    }
 }
 
@@ -25,18 +43,27 @@ header {
    // margin-top: 50vh;
    margin: 50vh 45vw 0 45vw;
    position: relative;
+
 }
 
 .cube {
    position: absolute;
 }
 .cube5, .cube3, .cube4, .cube2, .cube1 {
-   transition: transform 1s linear;
+   transition: transform 1.1s;
+   // transition: transform 1s linear;
    transform: translate(101px, 57px);
    &:hover {
       transform: translate(27px, 100px);
    }
 
+}
+
+.cubeEnd {
+   transition: bottom 1.1s;
+   &:hover {
+      bottom: 100px
+   }
 }
 
 // INDIVIDUAL CUBE STYLES
@@ -303,7 +330,7 @@ header {
    bottom: 130px;
    margin-left: -155px;
 
-   transition: all 1s linear;
+   transition: all 1.1s;
    transform: translate(-79px, -7px);
    &:hover {
       transform: translate(-200px, -50px);

@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+   <!-- Deeply and thoroughly indebted to the work of Paul R Hayes. https://paulrhayes.com/ His work with CSS cubes was used as the basis of my design. Follow him on Twitter @fofr.  EXTREMELY PUMPED ABOUT making all of those cubes with CSS--->
+   <!-- Honestly this site was a hoot to make... learned lots of stuff about keeping best practises while experimenting. Hope you enjoy!-->
+   <!-- Thanks to the talented Candice Cloutier for the design inspiration and answers to my CONSTANT questions. Check out here work here: https://www.candicecloutier.com/  -->
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Luca Morellato</title>
-   <meta name="twitter:title" content="Luca Morellato: Front End Dev">
-   <meta name="twitter:image" content="http://lucamorellato.com/assets/twitter.png?format=1500w">
-   <meta name="twitter:card" content="summary">
-   <meta name="twitter:url" content="http://www.lucamorellato.com/">
-   <link rel="stylesheet" type="text/css" href="styles.css">
+   <!-- Twitter/Facebook Meta Tags -->
+   <meta property="og:title" content="Luca Morellato: Front End Dev">
+   <meta property="og:description" content="Luca Morellato, creative Front End Developer.">
+   <meta property="og:image" content="https://lucamorellato.com/assets/twitter.png">
+   <meta property="og:url" content="https://lucamorellato.com/index.html">
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:image:alt" content="An image of Luca Morellato website landingpage">
+   <!-- end of meta tags -->
+   <link rel="stylesheet" href="styles.css">
    <link rel="preload" href="/fonts/ChicagoFLF.ttf" as="font" type="font/tff" crossorigin="anonymous">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -17,12 +25,13 @@
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="icon" href="assets/favicon.png" sizes="16x16" type="image/png">
 </head>
+
 <body>
    <!-- header -->
-   <header id="landing--page">
+   <header id="landing">
+
       <!-- The Cube Area -->
       <div class="cube__gallery">
-
          <!-- ninth cube -->
          <div class="cube cube9">
             <div class="topFace">
@@ -32,7 +41,6 @@
             <div class="leftFace">
             </div>
             <div class="rightFace">
-               <p>luca mo</p>
             </div>
          </div>
          <!-- Long cube -->
@@ -55,7 +63,6 @@
             <div class="leftFace">
             </div>
             <div class="rightFace">
-               <p>wow.</p>
             </div>
          </div>
          <!-- Second cube -->
@@ -67,7 +74,6 @@
             <div class="leftFace">
             </div>
             <div class="rightFace">
-               <p>hello.</p>
             </div>
          </div>
          <!-- first cube -->
@@ -104,8 +110,20 @@
             </div>
          </div>
       </div>
-      <h1 class="mobileHeader">luca morellato</h1>
-      <nav class="navDots">
+      <!-- end of cube area -->
+
+      <!-- landing page text -->
+      <h1 class="landing__header"
+      data-aos="fade-right"
+      data-aos-delay="1000"
+      data-aos-offset="-200"
+      data-aos-once="true">Luca Morellato -  Front End Developer</h1>
+
+      <!-- NAV list -->
+      <nav class="navDots"
+      data-aos="fade-left"
+      data-aos-delay="1000"
+      data-aos-once="true">
          <a href="#landing--page" class="dot heroDot dotSelected">
             <span class="dotText"><p>Home</p></span>
          </a>
@@ -144,25 +162,11 @@
          <!-- wrapper -->
          <div class="about__content wrapper">
             <article class="about__text" >
-               <div class="about__cubeContainer">
-                  <div class="about__cube">
-                     <div class="topFace">
-                        <div>
-                        </div>
-                     </div>
-                     <div class="leftFace">
-                     </div>
-                     <div class="rightFace">
-                     </div>
-                  </div>
-               </div>
-               <div class="about__headerContainer">
-                  <h1>Luca Morellato <span class="lower">Front End Developer</span></h1>
-                  <div class="about__image2">
-                     <img src="./assets/Luca.png" title="A butthead ¯\_(ツ)_/¯" alt="a portrait of Luca Morellato infront of a concrete wall">
-                  </div>
-               </div>
-               <p>Hi. I am a Front End Developer based in Toronto focused on building creative and accesible websites. I work with Javascript + React and have a passion for CSS. A thorough curiosity about how my favourite sites were made drives me and that is what led me to coding. This drive is a strength that has helped me to problem solve both in my career and while debugging code all night. I recently graduated from the HackerYou Web Dev Immersive Course and I am ready to join an amazing company as  Web Developer</p>
+               <h4 class="about__text--heading">Hi.</h4>
+               <p>I’m Luca. I am a Front End Developer based in Toronto, focused on building creative and accessible websites. I work
+               with Javascript, React, and have a passion for CSS. I have a deep curiosity about how things work, and that curiosity
+               lead me to pursue coding. My need to understand the “how” has helped me problem solve in both my career, my hobbies,
+               and while staying up to debug code all night. I am unreasonably obsessed with the desert, running, and modernist bungalows. 🏜 </p>
                <p class="linkp">If you want to chat, email me at <a href="mailto:luca.morellato@gmail.com">luca.morellato@gmail.com</a></p>
                <div class="skillContainer">
                   <p class="visuallyhidden">skills include:</p>
@@ -206,7 +210,6 @@
                            <path fill="#231F20" d="M139.121,347.551l116.275-64.848L222.191,78.209c-1.039-6.398-8.888-8.928-13.467-4.34L0,282.998
                         	l115.608,64.547C122.915,351.625,131.812,351.627,139.121,347.551" />
                         </svg>
-
                      </li>
                   </ul>
                </div>
@@ -229,8 +232,8 @@
             <!-- text div -->
             <article class="section1__text">
                <h2 class="section1__text--heading visuallyhidden">Run Forecast Run</h2>
-               <h3 class="section1__text--heading2"><span class="visuallyhidden">Skills used:</span>ES6 | RESTful API | jQuery | Pair Programming | Google Places API | Responsive | HTML5 | SASS</h3>
-               <p class="section1__text--p">This is Run Forecast Run. The last stop for a runner on the way out the door. Up to date current weather based on the conditions that affect you mid-run. Behind the scenes this app fetches accurate coordinates using Google Places API and passes those through the Dark Sky API for up to the minute weather and two hour forecast. Pair Programmed in Javascript and jQuery with <a target="_blank" href="http://mikeycouture.com/">Mikey Couture</a><, go get some miles in!/p>
+               <h3 class="section1__text--heading2"><span class="visuallyhidden">Skills used:</span>ES6 | RESTful API | jQuery | Responsive | Pair Programming | Mobile First  </h3>
+               <p class="section1__text--p">This is Run Forecast Run. The last stop for a runner on the way out the door. Up to date current weather based on the conditions that affect you mid-run. Behind the scenes this app fetches accurate coordinates using Google Places API and passes those through the Dark Sky API for up to the minute weather and two hour forecast. Pair Programmed in Javascript and jQuery with <a title="MY GUY" target="_blank" href="http://mikeycouture.com/">Mikey Couture</a>, go get some miles in!</p>
                <div class="section1__text--buttonContainer">
                   <a target="_blank" href="https://github.com/Lucamorellato/runForecastRun">view git</a>
                   <a target="_blank" href="http://lucamorellato.com/runForecast/">view live</a>
@@ -252,7 +255,7 @@
             <article class="section2__text">
                <div class="section2__text--landscape">
                   <h2 class="visuallyhidden section2__text--heading">Hot Dog Road Trip</h2>
-                  <h3 class="section2__text--heading2"><span class="visuallyhidden">Skills used:</span>ES6 | jQuery | Leaflet Map API | Responsive | HTML5 | SASS </h3>
+                  <h3 class="section2__text--heading2"><span class="visuallyhidden">Skills used:</span>ES6 | jQuery | Leaflet Map API | Responsive </h3>
                   <p class="section2__text--p">Hot Dog Road Trip is a love letter to my favourite food. The website renders information to a map dependent on location. Using Javascript best practises, this site is written to scale for future additions (more hot dogs). Mostly a fun way to explore Javascript and jQuery; this was my first attempt at mixing my passions of food, web development and maps. Find your favourite Hot Dog!</p>
                </div>
                <div class="section2__buttonContainer">
@@ -269,7 +272,7 @@
          <div class="section3__content wrapper">
             <article class="section3__text">
                <h2 class="section3__text--heading visuallyhidden">Rest Stop Reviews</h2>
-               <h3 class="section3__text--heading2"><span class="visuallyhidden">Skills used:</span>React.js | ES6 | Firebase | HTML5 | Responsive | CSS3  </h3>
+               <h3 class="section3__text--heading2"><span class="visuallyhidden">Skills used:</span>React | ES6 | Firebase | Responsive </h3>
                <p class="section3__text--p">Rest Stop Reviews is a place to post, like and sort through user generated reviews of rest stops. Born from a love of ripping across the continent in my Subaru station wagon, the info on this website is stored on Firebase to be read or added to at any time and any place. This single page site is written in React.js and provided me with my first taste of interacting with databases. Post a review and start exploring!</p>
                <div class="section3__text--buttonContainer">
                   <a target="_blank" href="https://github.com/Lucamorellato/reststopReview">view git</a>
@@ -294,8 +297,8 @@
             <article class="section4__text">
                <div class="section4__text--landscape">
                   <h2 class="visuallyhidden section4__text--heading">Garbage Sorter</h2>
-                  <h3 class="section4__text--heading2"><span class="visuallyhidden">Skills used:</span>React.js | ES6 | Pair Programming | RESTful API | Firebase Authentication | Responsive | HTML5 | CSS3 | Nivo.Rocks | React Router</h3>
-                  <p class="section4__text--p">Garbage Sorter is a multi-page collaborative  React project. A group consisting of Em Roe, Eric Wing and myself were tasked with creating a website that allowed users to track their weekly household waste in a interactive way. Users info is stored in Firebase so they can return frequently and can track their waste production weekly and monthly. The website also features the use of the City of Toronto API so users can search 1000s of items to determine how to properly dispose of their waste.</p>
+                  <h3 class="section4__text--heading2"><span class="visuallyhidden">Skills used:</span>React | ES6 | Pair Programming | RESTful API | Firebase | Responsive </h3>
+                  <p class="section4__text--p">Garbage Sorter is a multi-page collaborative  React project. A group consisting of <a href="http://emmaroe.io/" target="_blank">Em Roe</a>,<a href="ericwing.ca/" target="_blank"> Eric Wing</a> and myself created a website that allows users to track their weekly household waste production. Inputs are stored in Firebase so habits can be tracked long term. The website features use of the City of Toronto API so users can search 1000s of items to determine how to properly dispose of household waste.</p>
                </div>
                <div class="section4__buttonContainer">
                   <a target=" _blank" href="https://github.com/Lucamorellato/wasteSorter">view git</a>
@@ -308,31 +311,31 @@
 
       <!-- start of contact section -->
       <section id="contact" class="contact">
+         <h3 class="contact__heading">Wanna chat?</h3>
          <div class="contact__buttonContainer">
-            <a title="luca.morellato@gmail.com" target=" _blank" href="mailto:luca.morellato@gmail.com?Subject=Hey%20Pal">contact me</a>
+            <a title="ｌｕｃａ．ｍｏｒｅｌｌａｔｏ＠ｇｍａｉｌ．ｃｏｍ" target=" _blank" href="mailto:luca.morellato@gmail.com?Subject=Hey%20Pal">email me</a>
             <a target=" _blank" title="★彡彡Ｌｉｎｋｅｄｉｎミミ★" href="https://www.linkedin.com/in/luca-morellato-6a252b162/">linkedin</a>
             <a target=" _blank" title="・゜-: ✧ :-　ｔｗｉｔｔｅｒ　-: ✧ :-゜・" href="https://twitter.com/LucaMoDev">twitter</a>
             <a target=" _blank" title="├┬┴┬┴ＧｉｔＨｕｂ┬┴┬┴┤" href="https://github.com/Lucamorellato">github</a>
             <a target="_blank" title="‹—•°º¤°( ｒｅｓｕｍ é )°¤º°•—›"href="">resumé</a>
+            <a title="»»————- Ｍｅｄｉｕｍ ————-««" target="_blank" href="https://medium.com/@luca.morellato">medium</a>
          </div>
          <div class="imageContainer">
             <div data-aos="fade-right"
             data-aos-duration="1200"
-            data-aos-offset="400" class="imageLeft2">
+            data-aos-delay="200"
+            data-aos-offset="300" class="imageLeft2">
                <img id="image" src="./assets/boxLeft.png" alt="">
             </div>
             <div data-aos="fade-left"
             data-aos-duration="1200"
-            data-aos-offset="400" class="imageRight2">
+            data-aos-delay="200"
+            data-aos-offset="300" class="imageRight2">
                <img src="./assets/boxRight.png" alt="">
             </div>
-            <h4>HIRE ME PLS</h4>
          </div>
       </section> 
-      <div class="responsiveModule">
-         <h1>OH SO RESPONSIVE</h1>
-      </div>
-
+      <!-- end of contact section -->
    </main>
    <!-- end of main -->
 
